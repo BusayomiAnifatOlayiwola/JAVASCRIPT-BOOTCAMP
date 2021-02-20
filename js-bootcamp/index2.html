@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accessing Content: Part 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		
+		function displayUsername() {
+			// Let's write the code to display the username in an alert!
+        let username = document.getElementById('textInput').value;
+        alert(username);
+        }
+
+	</script>
+</head>
+<body>
+	<div>
+		<h2>A more realistic example:</h2>
+		<div>
+			<label>Username:</label>
+			<input type="text" id="textInput" />
+			<button onclick="displayUsername();">Submit</button>
+		</div>
+	</div>
+</body>
+</html>

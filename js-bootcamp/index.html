@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accessing Content: Part 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		
+		function alertText() {
+			// Let's write the code to display the text in an alert!
+        let message = document.getElementById("text").innerText;
+        alert(message)
+        }
+
+		window.onload = () => alertText();
+
+	</script>
+</head>
+<body>
+	<div>
+		<p id="text">
+			This text should display in the alert!
+		</p>
+	</div>
+</body>
+</html>

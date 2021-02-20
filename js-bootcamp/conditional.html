@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using If/Then/Else</title>
+	<link rel="stylesheet" type="text/css" href="conditionals.css">
+	<script type="text/javascript">
+
+		function submitAge() {
+			// age should be a positive number
+			// 0 - 12 should display child
+			// 13 - 18 should display teenager
+			// 19 and up should display grownup
+            
+            let age = document.getElementById('age-input').value;
+            let message = '';
+
+            if(isNaN(age) || age < 0){
+                message = 'invalid';
+            } else if(age < 13){
+                message = 'child'
+            } else if(age <= 18){
+                message = 'teenager'
+            } else {
+                message = 'grownup'
+            }
+
+            // set the result as the value of the 'result' p
+            document.getElementById('result').innerText = message;
+		}
+
+	</script>
+</head>
+<body>
+	<div id="content">
+		<label for="age-input">Enter your age:</label>
+		<input type="text" id="age-input" />
+		<button onclick="submitAge()">Submit</button>
+	</div>
+	<div>
+		<h1>You are a: <p id="result">mystery to me...</p></h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops</title>
+	<link rel="stylesheet" type="text/css" href="loop.css">
+	<script type="text/javascript">
+
+		function changeColors() {
+			// let's loop through the color blocks and give them a new look!
+        let blocks = document.getElementsByClassName('color_block');
+
+        for (let i = 0; i < blocks.length; i++){
+            blocks[i].style.backgroundColor =getRandomColor();
+        }
+        }
+
+		function getRandomColor() {
+			var red = Math.floor(Math.random() * 256);
+			var green = Math.floor(Math.random() * 256);
+			var blue = Math.floor(Math.random() * 256);
+
+			return `rgb(${red}, ${green}, ${blue})`;
+		}
+		
+	</script>
+</head>
+<body>
+	<div id="content">
+		<div>
+			<button onclick="changeColors()" id="change">Change colors</button>
+		</div>
+		<div class="side_by_side">
+			<div class="color_block"></div>
+			<div class="color_block"></div>
+		</div>
+		<div class="side_by_side">
+			<div class="color_block"></div>
+			<div class="color_block"></div>
+		</div>
+	</div>
+</body>
+</html>

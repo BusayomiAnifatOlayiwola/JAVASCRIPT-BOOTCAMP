@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modifying Content</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		
+		// get random color
+	function getRandomColor(){
+        const red = Math.floor(Math.random()* 256);
+        const green = Math.floor(Math.random()* 256);
+        const blue = Math.floor(Math.random()* 256);
+
+        return `rgb(${red}, ${green}, ${blue})`;
+    }
+		// set random colors
+        function setRandomColor(){
+       document.body.style.backgroundColor = getRandomColor();
+       document.body.style.color = getRandomColor();
+    }
+		// animate colors
+        function animateColors(){
+            setInterval(setRandomColor, 588);
+        }
+	
+        // animate the colors when the page loads
+        window.onload = () => {
+            animateColors();
+        }
+		
+	</script>
+</head>
+<body>
+	<div>
+		<p id="text">
+			It's Alive!
+		</p>
+	</div>
+</body>
+</html>
